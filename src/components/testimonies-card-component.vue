@@ -30,7 +30,7 @@ export default {
         }
     }
 
-    @media only screen and (min-width 768px) {
+    @media only screen and (min-width: 768px) {
         .img-container {
             border-right: 1px solid gainsboro;
         }
