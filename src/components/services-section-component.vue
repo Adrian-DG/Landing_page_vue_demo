@@ -20,7 +20,7 @@
 import ServiceCard from "./services-card-component";
 
 export default {
-  name: "Services",
+  name: 'Services',
   components: { ServiceCard },
   data: function () {
     return {
@@ -32,17 +32,17 @@ export default {
         },
         {
           image: "service.jpg",
-          name: "Enterprise Application",
+          name: "Enterprise Solutions",
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. `,
         },
         {
           image: "service.jpg",
-          name: "Cyber Security Assesory",
+          name: "Cyber Security",
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. `,
         },
         {
           image: "service.jpg",
-          name: "Mobile Development",
+          name: "Data Analysis",
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. `,
         },
       ],

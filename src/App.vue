@@ -7,6 +7,7 @@
         <Testimonies class="page-section"/>
         <Contact class="page-section"/>
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Header from './components/header-component';
 import Services from './components/services-section-component';
 import Testimonies from './components/testimonies-section-component';
 import Contact from './components/contact-section-component';
+import Footer from './components/footer-component';
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     Header,
     Services,
     Testimonies,
-    Contact
+    Contact,
+    Footer
   }
 }
 </script>
@@ -39,5 +42,6 @@ export default {
   .page-section {
     margin-top: 1.5em;
   }
+  
   
 </style>

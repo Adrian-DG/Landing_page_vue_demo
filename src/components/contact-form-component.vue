@@ -1,12 +1,11 @@
 <template>
-    <b-form @submit.prevent="onSubmit" @reset="onReset" class="contact-form">
+    <b-form @submit.prevent="onSubmit" class="contact-form" v-if="show">
         <b-form-row>
             <b-col>
                 <b-form-group
                 label-for="input-1">
                     <b-form-input
-                    v-model="company"
-                    type="text"
+                    v-model="request.company"
                     required
                     placeholder="Company name">
                     </b-form-input> 
@@ -15,9 +14,9 @@
             <b-col>
                 <b-form-group>
                     <b-form-select
-                    v-model="option"
+                    v-model="request.option"
                     :options="options"
-                    :value="null">
+                    required>
                     </b-form-select>
                 </b-form-group>
             </b-col>
@@ -26,7 +25,7 @@
             <b-col>
                 <b-form-group>
                     <b-form-input
-                    v-model="email"
+                    v-model="request.email"
                     type="email"
                     required
                     placeholder="example@mail.com">
@@ -36,10 +35,10 @@
             <b-col>
                 <b-form-group>
                     <b-form-input
-                    v-model="phone"
+                    v-model="request.phone"
                     type="phone"
                     required
-                    placeholder="example@mail.com">
+                    placeholder="Phone number">
                     </b-form-input> 
                 </b-form-group>
             </b-col>
@@ -47,7 +46,7 @@
         <b-form-row>
             <b-col>
                 <b-textarea
-                v-model="text"
+                v-model="request.text"
                 rows="3"
                 max-rows="5"
                 placeholder="Enter something"></b-textarea>
@@ -66,6 +65,13 @@ export default {
     name: 'ContactForm',
     data: function(){
         return {
+            request: {
+                company: '',
+                option: null,
+                email: '',
+                phone: '',
+                text: ''
+            },
             options: [
                 {
                     text: 'Choose',
@@ -76,12 +82,14 @@ export default {
                 'I need a mobile app',
                 'Social network marketing',
                 'I need a custom solution'
-            ]
+            ],
+            show: true
         }
     },
     methods: {
-        onSubmit(){
-            
+        onSubmit(event){
+            event.preventDefault();
+            alert(JSON.stringify(this.request));
         }
     }    
 }

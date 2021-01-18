@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
     .card {
-        height: 60vh;
+        max-height: 60vh;
     }
     .card-img-top {
         width: 100%;
